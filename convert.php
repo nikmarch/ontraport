@@ -22,6 +22,10 @@ if (isset($argv[3])) {
 
 $input = json_decode(file_get_contents($file_name), true);
 
+if(!is_array($input)) {
+    die("\n\n\nCorrupted JSON file\n\n\n");
+}
+
 // show input
 echo "Input array:\n";
 print_r($input);
