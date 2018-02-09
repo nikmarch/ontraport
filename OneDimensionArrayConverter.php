@@ -15,8 +15,11 @@ class OneDimensionArrayConverter extends AbstractArrayConverter {
             $result_key = "{$input_key}{$this->separator}{$key}";
 
             if (is_array($value)) {
+                // dive deeper
                 $this->run($value, $result, $result_key);
             } else {
+                // cut the separator at the beginning of the key
+                $result_key = substr($result_key, 1);
                 $result[$result_key] = $value;
             }
         }

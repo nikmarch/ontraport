@@ -6,8 +6,8 @@ abstract class AbstractArrayConverter {
 
     abstract public function convert();
 
-    public function __construct(Array $input, $separator) {
+    public function __construct(Array $input, $separator = null) {
         $this->input     = $input;
-        $this->separator = $separator;
+        $this->separator = $separator ?: self::DEFAULT_SEPARATOR;
     }
 }
