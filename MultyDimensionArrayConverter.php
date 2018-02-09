@@ -1,13 +1,6 @@
 <?php
 
-$input = json_decode(file_get_contents('./multi-dimentional.json'), true);
-
-// show input
-echo "Input array:\n";
-print_r($input);
-echo "\n";
-
-class ArrayConverter {
+class MulryDimesionArrayConvertor {
   const MULTY_DIMENTION = 'multy';
   protected $input;
 
@@ -45,8 +38,3 @@ class ArrayConverter {
   }
 
 }
-
-$converter = new ArrayConverter($input);
-$result = $converter->convert('multy');
-
-print_r($result);
