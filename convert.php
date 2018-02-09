@@ -7,7 +7,7 @@ spl_autoload_register(function($class){
 if (count($argv) < 3) {
     die("\n\n\n
         Arguments required:\n
-        1. command: multy or one\n
+        1. command: multi or one\n
         2. the path to the json file
 \n\n\n");
 }

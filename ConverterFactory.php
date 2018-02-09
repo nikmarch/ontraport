@@ -3,8 +3,8 @@
 class ConverterFactory {
     public static function getConverter($command, $input, $separator) {
         switch($command) {
-        case 'multy':
-            $instance = new MultyDimensionArrayConverter($input, $separator);
+        case 'multi':
+            $instance = new MultiDimensionArrayConverter($input, $separator);
             break;
         case 'one': 
         default:
